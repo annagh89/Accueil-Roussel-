@@ -1,10 +1,10 @@
 <!doctype html>
-<html lang="fr" xmlns:md="http://www.w3.org/1999/xhtml">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Fleurs Roussel</title>
+    <title>Fleurs Roussel - Artisan Fleuriste à Blois</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,21 +14,24 @@
 <body>
 
 <header class="bg-creme py-6">
-    <div class="max-w-[1152px] mx-auto px-4 md:px-8 flex flex-col gap-6">
+    <!-- Մոբայլում՝ 2 սյունականի Grid (Լոգոն ձախում, Կոճակը աջում, Մենյուն՝ 2-րդ տողում) -->
+    <!-- Դեսքթոփում (md:)՝ 3 սյունակ մեկ տողով (Լոգո - Մենյու - Կոճակ) -->
+    <div class="max-w-[1152px] mx-auto px-4 md:px-8 grid grid-cols-[1fr_auto] md:grid-cols-[auto_1fr_auto] items-center gap-y-6 md:gap-x-8">
+        
+        <!-- 1. Լոգո (Մոբայլում՝ 1-ին տողի ձախում, Դեսքթոփում՝ ձախում) -->
+        <a href="index.html" class="flex items-center gap-2 sm:gap-3 min-w-0">
+            <img src="images/logo-roussel.svg" alt="" class="shrink-0 w-7 h-7 sm:w-auto sm:h-auto">
+            <span class="text-[19px] sm:text-[24px] font-titre text-bordeaux font-bold whitespace-nowrap truncate">Fleurs Roussel</span>
+        </a>
 
-        <div class="flex items-center justify-between">
-            <a href="index.html" class="flex items-center">
-                <img src="images/logo-roussel.svg" alt="Fleurs Roussel">
-                <span class="text-[24px] font-titre text-bordeaux font-bold whitespace-nowrap">Fleurs Roussel</span>
-            </a>
+        <!-- 2. Կոճակ (Մոբայլում՝ 1-ին տողի աջում, Դեսքթոփում՝ աջ ծայրում md:order-3-ով) -->
+        <a href="#commander" class="justify-self-end bg-framboise text-blanc px-[16px] sm:px-[20px] py-[8px] rounded-full font-inter font-medium text-[13px] sm:text-[14px] shrink-0 hover:bg-bordeaux transition-colors md:order-3">
+            Commander
+        </a>
 
-            <a href="#commander" class="bg-framboise text-blanc px-[20px] py-[8px] rounded-full font-inter font-medium text-[14px] shrink-0 hover:bg-bordeaux transition-colors">
-                Commander
-            </a>
-        </div>
-
-        <nav>
-            <ul class="mb-[16px] mt-[16px] font-inter font-medium text-[14px] text-encre flex justify-between gap-x-[16px] md:justify-start md:gap-x-[42.67px] py-1">
+        <!-- 3. Մենյու (Մոբայլում՝ 2-րդ տող col-span-2, Դեսքթոփում՝ մեջտեղում md:order-2) -->
+        <nav class="col-span-2 md:col-span-1 md:order-2 w-full" aria-label="Navigation principale">
+            <ul class="font-inter font-medium text-[14px] text-encre flex justify-between md:justify-center gap-x-[16px] md:gap-x-[42.67px] py-1">
                 <li><a href="index.html" class="hover:text-bordeaux transition-colors">Bouquets</a></li>
                 <li><a href="Ateliers.html" class="hover:text-bordeaux transition-colors">Ateliers</a></li>
                 <li><a href="livraison.html" class="hover:text-bordeaux transition-colors">Livraison</a></li>
@@ -40,32 +43,44 @@
 </header>
 
 <main>
-    <section class="bg-creme ">
-        <div class="max-w-[1152px] mx-auto px-4 md:px-8">
-            <p class="text-[12px] font-semibold tracking-[0.1em] text-sauge">ARTISAN FLEURISTE A BLOIS DEPUIS 1998</p>
-            <h1 class="text-[36px] leading-[45px] font-semibold font-titre mb-[24px]">Des fleurs de saison, composées à la main</h1>
-            <p class="mb-[32px]">
-                Bouquets du marché, roses anciennes et compositions champêtres : chaque semaine, Madame Roussel choisit les plus belles fleurs des producteurs de la région.
-            </p>
+    <!-- HERO SECTION -->
+    <section class="bg-creme pt-[32px] pb-[64px] md:py-[80px]">
+        <div class="max-w-[1152px] mx-auto px-4 md:px-8 grid grid-cols-1 md:grid-cols-2 gap-[40px] items-center">
+            
             <div>
-                <ul class="flex flex-col gap-4">
+                <p class="text-[12px] font-semibold tracking-[0.1em] text-sauge mb-[16px] uppercase">ARTISAN FLEURISTE A BLOIS DEPUIS 1998</p>
+                
+                <h1 class="text-[36px] md:text-[48px] lg:text-[60px] leading-[1.1] font-bold font-titre mb-[24px] text-encre">
+                    Des fleurs de saison, composées à la main
+                </h1>
+                
+                <p class="mb-[32px] font-inter text-[16px] md:text-[18px] text-encre/80">
+                    Bouquets du marché, roses anciennes et compositions champêtres : chaque semaine, Madame Roussel choisit les plus belles fleurs des producteurs de la région.
+                </p>
+                
+                <ul class="flex flex-col sm:flex-row gap-4">
                     <li>
-                        <a href="#" class="block w-full text-center bg-framboise text-blanc py-3 rounded-full font-medium hover:opacity-90 transition-opacity">
+                        <a href="#commander" class="block w-full sm:w-auto sm:inline-block text-center bg-framboise text-blanc px-[32px] py-3 rounded-full font-medium font-inter hover:opacity-90 transition-opacity">
                             Voir les bouquets
                         </a>
                     </li>
                     <li>
-                        <a href="#" class="block w-full text-center border-2 border-framboise text-framboise py-3 rounded-full font-medium hover:bg-bordeaux/5 transition-colors mb-10">
+                        <a href="#" class="block w-full sm:w-auto sm:inline-block text-center border-2 border-framboise text-framboise px-[32px] py-3 rounded-full font-medium font-inter hover:bg-bordeaux/5 transition-colors">
                             Nos ateliers
                         </a>
                     </li>
                 </ul>
-                <img class="rounded-[16px]" src="images/bouquet-vase.svg" alt="">
             </div>
+
+            <div>
+                <img class="rounded-[16px] md:rounded-[24px] w-full object-cover" src="images/bouquet-vase.svg" alt="Composition florale dans un vase">
+            </div>
+
         </div>
     </section>
 
-    <section class="bg-blanc py-[64px] md:py-[96px]">
+    <!-- BOUQUETS SECTION (Ավելացվել է id="commander") -->
+    <section id="commander" class="bg-blanc py-[64px] md:py-[96px]">
         <div class="max-w-[1152px] mx-auto px-4 md:px-8">
             <h2 class="font-titre font-bold text-[30px] md:text-[36px] leading-[1.2] mb-[16px] text-encre">
                 Les bouquets de la semaine
@@ -75,8 +90,9 @@
             </p>
 
             <div class="flex flex-wrap gap-x-[40px] gap-y-[32px]">
+                
                 <article class="w-full sm:w-[calc((100%_-_40px)/2)] lg:w-[calc((100%_-_80px)/3)] flex flex-col overflow-hidden rounded-[16px] bg-creme shadow-[0_1px_3px_rgba(0,0,0,0.08)] transition-shadow duration-200 hover:shadow-[0_8px_24px_rgba(0,0,0,0.12)]">
-                    <img src="images/bouquet-marche.svg" alt="Bouquet du marché : renoncules, marguerites et lavande" class="aspect-[4/3] w-full object-cover">
+                    <img src="images/bouquet-marche.svg" alt="Bouquet du marché avec renoncules et marguerites" class="aspect-[4/3] w-full object-cover">
                     <div class="flex flex-1 flex-col p-[24px]">
                         <h3 class="font-titre font-bold text-[20px] mb-[8px] text-bordeaux">Bouquet du marché</h3>
                         <p class="font-inter text-[14px] mb-[32px] text-encre/80">
@@ -90,7 +106,7 @@
                 </article>
 
                 <article class="w-full sm:w-[calc((100%_-_40px)/2)] lg:w-[calc((100%_-_80px)/3)] flex flex-col overflow-hidden rounded-[16px] bg-creme shadow-[0_1px_3px_rgba(0,0,0,0.08)] transition-shadow duration-200 hover:shadow-[0_8px_24px_rgba(0,0,0,0.12)]">
-                    <img src="images/bouquet-roses.svg" alt="Roses anciennes parfumées, en camaïeu de framboise" class="aspect-[4/3] w-full object-cover">
+                    <img src="images/bouquet-roses.svg" alt="Bouquet de roses anciennes parfumées" class="aspect-[4/3] w-full object-cover">
                     <div class="flex flex-1 flex-col p-[24px]">
                         <h3 class="font-titre font-bold text-[20px] mb-[8px] text-bordeaux">Roses anciennes</h3>
                         <p class="font-inter text-[14px] mb-[32px] text-encre/80">
@@ -104,7 +120,7 @@
                 </article>
 
                 <article class="w-full sm:w-[calc((100%_-_40px)/2)] lg:w-[calc((100%_-_80px)/3)] flex flex-col overflow-hidden rounded-[16px] bg-creme shadow-[0_1px_3px_rgba(0,0,0,0.08)] transition-shadow duration-200 hover:shadow-[0_8px_24px_rgba(0,0,0,0.12)]">
-                    <img src="images/bouquet-champetre.svg" alt="Bouquet champêtre : fleurs des champs, lavande et feuillages" class="aspect-[4/3] w-full object-cover">
+                    <img src="images/bouquet-champetre.svg" alt="Bouquet champêtre avec fleurs des champs" class="aspect-[4/3] w-full object-cover">
                     <div class="flex flex-1 flex-col p-[24px]">
                         <h3 class="font-titre font-bold text-[20px] mb-[8px] text-bordeaux">Champêtre</h3>
                         <p class="font-inter text-[14px] mb-[32px] text-encre/80">
@@ -116,76 +132,106 @@
                         </div>
                     </div>
                 </article>
+
             </div>
         </div>
     </section>
 
+    <!-- BENEFITS SECTION -->
     <section class="bg-petale py-[64px] md:py-[96px] text-encre">
         <div class="max-w-[1152px] mx-auto px-4 md:px-8 flex flex-col items-center gap-[32px] text-center">
             <h2 class="font-titre font-bold text-[30px] md:text-[36px] leading-[1.2]">Pourquoi choisir Fleurs Roussel ?</h2>
 
-            <div class="flex flex-col items-center gap-[8px]">
-                <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center">
-                    <img src="images/icone-saison.svg" alt="" class="w-8 h-8 object-contain">
+            <div class="flex flex-col gap-[32px] md:grid md:grid-cols-3 w-full">
+                
+                <div class="flex flex-col items-center gap-[8px]">
+                    <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center">
+                        <img src="images/icone-saison.svg" alt="" class="w-8 h-8 object-contain">
+                    </div>
+                    <h3 class="font-titre font-bold text-[20px]">Des fleurs de saison</h3>
+                    <p class="font-inter text-[16px] text-encre/80">Achetées chez des producteurs du Loir-et-Cher et de Touraine.</p>
                 </div>
-                <h3 class="font-titre font-bold text-[20px]">Des fleurs de saison</h3>
-                <p class="font-inter text-[16px] text-encre/80">Achetées chez des producteurs du Loir-et-Cher et de Touraine.</p>
-            </div>
 
-            <div class="flex flex-col items-center gap-[8px]">
-                <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center">
-                    <img src="images/icone-livraison.svg" alt="" class="w-8 h-8 object-contain">
+                <div class="flex flex-col items-center gap-[8px]">
+                    <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center">
+                        <img src="images/icone-livraison.svg" alt="" class="w-8 h-8 object-contain">
+                    </div>
+                    <h3 class="font-titre font-bold text-[20px]">Livrées le jour même</h3>
+                    <p class="font-inter text-[16px] text-encre">Pour toute commande passée avant midi, dans Blois et ses environs.</p>
                 </div>
-                <h3 class="font-titre font-bold text-[20px]">Livrées le jour même</h3>
-                <p class="font-inter text-[16px] text-encre">Pour toute commande passée avant midi, dans Blois et ses environs.</p>
-            </div>
 
-            <div class="flex flex-col items-center gap-[8px]">
-                <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center">
-                    <img class="w-8 h-8 object-contain" src="images/icone-atelier.svg" alt="">
+                <div class="flex flex-col items-center gap-[8px]">
+                    <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center">
+                        <img class="w-8 h-8 object-contain" src="images/icone-atelier.svg" alt="">
+                    </div>
+                    <h3 class="font-titre font-bold text-[20px]">Composées à la main</h3>
+                    <p class="font-inter text-[16px] text-encre">Chaque bouquet est unique et emballé dans du papier recyclé.</p>
                 </div>
+
             </div>
         </div>
     </section>
 
+    <!-- ATELIER SECTION -->
     <section class="flex flex-col bg-sauge py-[64px] md:py-[96px]">
-        <div class="max-w-[1152px] mx-auto px-4 md:px-8">
-            <div>
-                <img class="rounded-[24px]" src="images/atelier.svg" alt="">
+        <div class="max-w-[1152px] mx-auto px-4 md:px-8 md:grid md:grid-cols-2 md:gap-[64px] md:items-center">
+            
+            <div class="md:order-2">
+                <img class="rounded-[24px] w-full object-cover" src="images/atelier.svg" alt="Atelier floral de Madame Roussel">
             </div>
 
-            <div>
-                <h2 class="text-[30px] font-bold font-titre text-blanc mb-[16px] mt-[40px]">Composez votre bouquet en atelier</h2>
+            <div class="md:order-1">
+                <h2 class="text-[30px] font-bold font-titre text-blanc mb-[16px] mt-[40px] md:mt-0">Composez votre bouquet en atelier</h2>
                 <p class="font-inter text-[16px] text-blanc mb-[24px]">Un samedi par mois, Madame Roussel partage ses gestes de fleuriste. Vous repartez avec votre composition.</p>
                 <p class="font-inter text-[16px] text-blanc mb-[8px]">Six participants au maximum</p>
                 <p class="font-inter text-[16px] text-blanc mb-[8px]">Fleurs et matériel fournis</p>
                 <p class="font-inter text-[16px] text-blanc mb-[32px]">45 € par personne</p>
-                <button class="font-inter text-[16px] font-semibold text-encre bg-blanc px-[24px] py-[12px] rounded-full">Réserver une place</button>
+                <a href="#contact" class="inline-block font-inter text-[16px] font-semibold text-encre bg-blanc px-[24px] py-[12px] rounded-full hover:bg-creme transition-colors">Réserver une place</a>
             </div>
+
         </div>
     </section>
 </main>
 
-<footer class="bg-encre py-[64px] md:py-[96px] text-blanc">
-    <div class="max-w-[1152px] mx-auto px-4 md:px-8">
-        <div>
-            <h6>Fleurs Roussel</h6>
-            <p>Artisan fleuriste à Blois depuis 1998.</p>
+<!-- FOOTER (Շտկված են հավասարազոր h3 վերնագրերը) -->
+<footer class="bg-encre pt-[64px] md:pt-[96px] text-blanc">
+    <div class="max-w-[1152px] mx-auto px-4 md:px-8 pb-[48px] md:pb-[64px]">
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
+            
+            <!-- 1-ին սյունակ -->
+            <div>
+                <h3 class="font-titre font-bold text-[24px] mb-[12px]">Fleurs Roussel</h3>
+                <p class="font-inter text-[14px] text-blanc/80 leading-relaxed">
+                    Artisan fleuriste à Blois depuis 1998.
+                </p>
+            </div>
+
+            <!-- 2-րդ սյունակ (h4-ը փոխարինվել է h3-ով) -->
+            <div>
+                <h3 class="font-inter font-bold text-[14px] md:text-[16px] mb-[12px] md:mb-[16px]">Boutique</h3>
+                <div class="font-inter text-[14px] text-blanc/80 flex flex-col gap-1">
+                    <p>12 rue du Commerce, 41000 Blois</p>
+                    <p>Du mardi au samedi, 9 h 30 à 19 h</p>
+                    <p>02 54 00 00 00</p>
+                </div>
+            </div>
+
+            <!-- 3-րդ սյունակ (h4-ը փոխարինվել է h3-ով) -->
+            <div>
+                <h3 class="font-inter font-bold text-[14px] md:text-[16px] mb-[12px] md:mb-[16px]">Liens utiles</h3>
+                <nav class="font-inter text-[14px] text-blanc/80 flex flex-col gap-2" aria-label="Liens utiles du pied de page">
+                    <a href="livraison.html" class="hover:text-blanc transition-colors underline-offset-4 hover:underline">Livraison</a>
+                    <a href="#" class="hover:text-blanc transition-colors underline-offset-4 hover:underline">Mentions légales</a>
+                </nav>
+            </div>
+
         </div>
-        <div>
-            <p>Boutique</p>
-            <p>12 rue du Commerce, 41000 Blois</p>
-            <p>Du mardi au samedi, 9 h 30 à 19 h</p>
-            <p>02 54 00 00 00</p>
-        </div>
-        <div>
-            <p>Liens utiles</p>
-            <a href="#">Livraison</a>
-            <a href="#">Mentions légales</a>
-        </div>
-        <div>
-            <p>©Roussel</p>
-        </div>
+
+    </div>
+
+    <div class="border-t border-blanc/20 py-[24px] text-center w-full">
+        <p class="font-inter text-[14px] text-blanc/80">© Fleurs Roussel</p>
     </div>
 </footer>
 
