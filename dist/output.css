@@ -280,9 +280,6 @@
   .overflow-hidden {
     overflow: hidden;
   }
-  .rounded-2xl {
-    border-radius: var(--radius-2xl);
-  }
   .rounded-\[16px\] {
     border-radius: 16px;
   }
@@ -291,9 +288,6 @@
   }
   .rounded-full {
     border-radius: calc(infinity * 1px);
-  }
-  .rounded-ee-full {
-    border-end-end-radius: calc(infinity * 1px);
   }
   .border-2 {
     border-style: var(--tw-border-style);
@@ -322,9 +316,6 @@
   }
   .bg-white {
     background-color: var(--color-white);
-  }
-  .bg-repeat-round {
-    background-repeat: round;
   }
   .object-contain {
     object-fit: contain;
