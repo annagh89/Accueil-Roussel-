@@ -14,26 +14,21 @@
 <body>
 
 <header class="bg-creme py-6">
-    <!-- Գլխավոր կոնտեյներ. մոբայլում 16px կողային լուսանցքներ (px-4), flex-col, gap-6 -->
     <div class="max-w-[1152px] mx-auto px-4 md:px-8 flex flex-col gap-6">
 
-        <!-- Վերին տող. Լոգո և «Commander» կոճակ, հեռավորությունը 23px -->
-        <div class="flex items-center justify-between ">
-
-            <a href="index.html" class="flex items-center ">
-                <img src="images/logo-roussel.svg" alt="Fleurs Roussel" >
+        <div class="flex items-center justify-between">
+            <a href="index.html" class="flex items-center">
+                <img src="images/logo-roussel.svg" alt="Fleurs Roussel">
                 <span class="text-[24px] font-titre text-bordeaux font-bold whitespace-nowrap">Fleurs Roussel</span>
             </a>
 
             <a href="#commander" class="bg-framboise text-blanc px-[20px] py-[8px] rounded-full font-inter font-medium text-[14px] shrink-0 hover:bg-bordeaux transition-colors">
                 Commander
             </a>
-
         </div>
 
-        <!-- Ստորին տող. Մենյու, հեռավորությունը 42.67px -->
         <nav>
-            <ul class=" mb-[16px] mt[16px]-font-inter font-medium text-[14px] text-encre flex justify-between gap-x-[16px] md:justify-start md:gap-x-[42.67px] py-1">
+            <ul class="mb-[16px] mt-[16px] font-inter font-medium text-[14px] text-encre flex justify-between gap-x-[16px] md:justify-start md:gap-x-[42.67px] py-1">
                 <li><a href="index.html" class="hover:text-bordeaux transition-colors">Bouquets</a></li>
                 <li><a href="Ateliers.html" class="hover:text-bordeaux transition-colors">Ateliers</a></li>
                 <li><a href="livraison.html" class="hover:text-bordeaux transition-colors">Livraison</a></li>
@@ -45,7 +40,7 @@
 </header>
 
 <main>
-    <section class="bg-creme mt[32px]">
+    <section class="bg-creme ">
         <div class="max-w-[1152px] mx-auto px-4 md:px-8">
             <p class="text-[12px] font-semibold tracking-[0.1em] text-sauge">ARTISAN FLEURISTE A BLOIS DEPUIS 1998</p>
             <h1 class="text-[36px] leading-[45px] font-semibold font-titre mb-[24px]">Des fleurs de saison, composées à la main</h1>
@@ -79,9 +74,7 @@
                 Trois compositions renouvelées chaque lundi, en taille moyenne. Livraison possible le jour même à Blois.
             </p>
 
-            <!-- Քարտեր. Flexbox-ով. Մոբայլում 100%, 640px-ից 2 քարտ, 1024px-ից 3 քարտ. հորիզոնական 40px, ուղղահայաց 32px -->
             <div class="flex flex-wrap gap-x-[40px] gap-y-[32px]">
-
                 <article class="w-full sm:w-[calc((100%_-_40px)/2)] lg:w-[calc((100%_-_80px)/3)] flex flex-col overflow-hidden rounded-[16px] bg-creme shadow-[0_1px_3px_rgba(0,0,0,0.08)] transition-shadow duration-200 hover:shadow-[0_8px_24px_rgba(0,0,0,0.12)]">
                     <img src="images/bouquet-marche.svg" alt="Bouquet du marché : renoncules, marguerites et lavande" class="aspect-[4/3] w-full object-cover">
                     <div class="flex flex-1 flex-col p-[24px]">
@@ -123,7 +116,6 @@
                         </div>
                     </div>
                 </article>
-
             </div>
         </div>
     </section>
@@ -141,36 +133,40 @@
             </div>
 
             <div class="flex flex-col items-center gap-[8px]">
-               <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center">
-                   <img src="images/icone-livraison.svg" alt="" class="w-8 h-8 object-contain">
-               </div>
-
-
+                <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center">
+                    <img src="images/icone-livraison.svg" alt="" class="w-8 h-8 object-contain">
+                </div>
                 <h3 class="font-titre font-bold text-[20px]">Livrées le jour même</h3>
                 <p class="font-inter text-[16px] text-encre">Pour toute commande passée avant midi, dans Blois et ses environs.</p>
             </div>
 
             <div class="flex flex-col items-center gap-[8px]">
                 <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center">
-                <img class="w-8 h-8 object-contain" src="images/icone-atelieg
+                    <img class="w-8 h-8 object-contain" src="images/icone-atelier.svg" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="flex flex-col bg-sauge py-[64px] md:py-[96px]">
         <div class="max-w-[1152px] mx-auto px-4 md:px-8">
             <div>
                 <img class="rounded-[24px]" src="images/atelier.svg" alt="">
             </div>
 
-            <div >
-                <h2 class=" text-[30px] font-bold font-titre text-blanc mb-[16px] mt-[40px] ">Composez votre bouquet en atelier</h2>
-                <p class=" font-inter  text-[16px]  text-blanc mb-[24px] ">Un samedi par mois, Madame Roussel partage ses gestes de fleuriste. Vous repartez avec votre composition.</p>
-                <p class=" font-inter  text-[16px]  text-blanc mb-[8px]  ">Six participants au maximum</p>
-                <p class=" font-inter text-[16px]  text-blanc mb-[8px] ">Fleurs et matériel fournis</p>
-                <p class=" font-inter  text-[16px]  text-blanc mb-[32px] ">45 € par personne</p>
+            <div>
+                <h2 class="text-[30px] font-bold font-titre text-blanc mb-[16px] mt-[40px]">Composez votre bouquet en atelier</h2>
+                <p class="font-inter text-[16px] text-blanc mb-[24px]">Un samedi par mois, Madame Roussel partage ses gestes de fleuriste. Vous repartez avec votre composition.</p>
+                <p class="font-inter text-[16px] text-blanc mb-[8px]">Six participants au maximum</p>
+                <p class="font-inter text-[16px] text-blanc mb-[8px]">Fleurs et matériel fournis</p>
+                <p class="font-inter text-[16px] text-blanc mb-[32px]">45 € par personne</p>
                 <button class="font-inter text-[16px] font-semibold text-encre bg-blanc px-[24px] py-[12px] rounded-full">Réserver une place</button>
             </div>
         </div>
     </section>
 </main>
 
-<footer class="bg-encre   py-[64px] md:py-[96px] text-blanc">
+<footer class="bg-encre py-[64px] md:py-[96px] text-blanc">
     <div class="max-w-[1152px] mx-auto px-4 md:px-8">
         <div>
             <h6>Fleurs Roussel</h6>
