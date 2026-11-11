@@ -13,29 +13,25 @@
 </head>
 <body>
 
-<header class="bg-creme py-6">
-    <!-- Մոբայլում՝ 2 սյունականի Grid (Լոգոն ձախում, Կոճակը աջում, Մենյուն՝ 2-րդ տողում) -->
-    <!-- Դեսքթոփում (md:)՝ 3 սյունակ մեկ տողով (Լոգո - Մենյու - Կոճակ) -->
-    <div class="max-w-[1152px] mx-auto px-4 md:px-8 grid grid-cols-[1fr_auto] md:grid-cols-[auto_1fr_auto] items-center gap-y-6 md:gap-x-8">
+<!-- EN-TÊTE (HEADER) -->
+<header class="bg-creme py-4">
+    <div class="max-w-[1152px] mx-auto px-4 md:px-8 grid grid-cols-[1fr_auto] md:grid-cols-[auto_1fr_auto] items-center gap-y-4 md:gap-x-8">
         
-        <!-- 1. Լոգո (Մոբայլում՝ 1-ին տողի ձախում, Դեսքթոփում՝ ձախում) -->
         <a href="index.html" class="flex items-center gap-2 sm:gap-3 min-w-0">
             <img src="images/logo-roussel.svg" alt="" class="shrink-0 w-7 h-7 sm:w-auto sm:h-auto">
             <span class="text-[19px] sm:text-[24px] font-titre text-bordeaux font-bold whitespace-nowrap truncate">Fleurs Roussel</span>
         </a>
 
-        <!-- 2. Կոճակ (Մոբայլում՝ 1-ին տողի աջում, Դեսքթոփում՝ աջ ծայրում md:order-3-ով) -->
-        <a href="#commander" class="justify-self-end bg-framboise text-blanc px-[16px] sm:px-[20px] py-[8px] rounded-full font-inter font-medium text-[13px] sm:text-[14px] shrink-0 hover:bg-bordeaux transition-colors md:order-3">
+        <a href="#commander" class="justify-self-end bg-framboise text-blanc px-[16px] sm:px-[20px] py-[8px] rounded-full font-inter font-medium text-[13px] sm:text-[14px] shrink-0 hover:bg-bordeaux transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-framboise md:order-3">
             Commander
         </a>
 
-        <!-- 3. Մենյու (Մոբայլում՝ 2-րդ տող col-span-2, Դեսքթոփում՝ մեջտեղում md:order-2) -->
         <nav class="col-span-2 md:col-span-1 md:order-2 w-full" aria-label="Navigation principale">
             <ul class="font-inter font-medium text-[14px] text-encre flex justify-between md:justify-center gap-x-[16px] md:gap-x-[42.67px] py-1">
-                <li><a href="index.html" class="hover:text-bordeaux transition-colors">Bouquets</a></li>
-                <li><a href="Ateliers.html" class="hover:text-bordeaux transition-colors">Ateliers</a></li>
-                <li><a href="livraison.html" class="hover:text-bordeaux transition-colors">Livraison</a></li>
-                <li><a href="contact.html" class="hover:text-bordeaux transition-colors">Contact</a></li>
+                <li><a href="index.html" class="hover:text-bordeaux transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-framboise">Bouquets</a></li>
+                <li><a href="Ateliers.html" class="hover:text-bordeaux transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-framboise">Ateliers</a></li>
+                <li><a href="livraison.html" class="hover:text-bordeaux transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-framboise">Livraison</a></li>
+                <li><a href="contact.html" class="hover:text-bordeaux transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-framboise">Contact</a></li>
             </ul>
         </nav>
 
@@ -60,12 +56,12 @@
                 
                 <ul class="flex flex-col sm:flex-row gap-4">
                     <li>
-                        <a href="#commander" class="block w-full sm:w-auto sm:inline-block text-center bg-framboise text-blanc px-[32px] py-3 rounded-full font-medium font-inter hover:opacity-90 transition-opacity">
+                        <a href="#commander" class="block w-full sm:w-auto sm:inline-block text-center bg-framboise text-blanc px-[32px] py-3 rounded-full font-medium font-inter hover:opacity-90 transition-opacity focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-framboise">
                             Voir les bouquets
                         </a>
                     </li>
                     <li>
-                        <a href="#" class="block w-full sm:w-auto sm:inline-block text-center border-2 border-framboise text-framboise px-[32px] py-3 rounded-full font-medium font-inter hover:bg-bordeaux/5 transition-colors">
+                        <a href="Ateliers.html" class="block w-full sm:w-auto sm:inline-block text-center border-2 border-framboise text-framboise px-[32px] py-3 rounded-full font-medium font-inter hover:bg-bordeaux/5 transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-framboise">
                             Nos ateliers
                         </a>
                     </li>
@@ -79,7 +75,7 @@
         </div>
     </section>
 
-    <!-- BOUQUETS SECTION (Ավելացվել է id="commander") -->
+    <!-- SECTION BOUQUETS -->
     <section id="commander" class="bg-blanc py-[64px] md:py-[96px]">
         <div class="max-w-[1152px] mx-auto px-4 md:px-8">
             <h2 class="font-titre font-bold text-[30px] md:text-[36px] leading-[1.2] mb-[16px] text-encre">
@@ -137,7 +133,7 @@
         </div>
     </section>
 
-    <!-- BENEFITS SECTION -->
+    <!-- SECTION ATOUTS -->
     <section class="bg-petale py-[64px] md:py-[96px] text-encre">
         <div class="max-w-[1152px] mx-auto px-4 md:px-8 flex flex-col items-center gap-[32px] text-center">
             <h2 class="font-titre font-bold text-[30px] md:text-[36px] leading-[1.2]">Pourquoi choisir Fleurs Roussel ?</h2>
@@ -172,7 +168,7 @@
         </div>
     </section>
 
-    <!-- ATELIER SECTION -->
+    <!-- SECTION ATELIER -->
     <section class="flex flex-col bg-sauge py-[64px] md:py-[96px]">
         <div class="max-w-[1152px] mx-auto px-4 md:px-8 md:grid md:grid-cols-2 md:gap-[64px] md:items-center">
             
@@ -186,20 +182,19 @@
                 <p class="font-inter text-[16px] text-blanc mb-[8px]">Six participants au maximum</p>
                 <p class="font-inter text-[16px] text-blanc mb-[8px]">Fleurs et matériel fournis</p>
                 <p class="font-inter text-[16px] text-blanc mb-[32px]">45 € par personne</p>
-                <a href="#contact" class="inline-block font-inter text-[16px] font-semibold text-encre bg-blanc px-[24px] py-[12px] rounded-full hover:bg-creme transition-colors">Réserver une place</a>
+                <a href="contact.html" class="inline-block font-inter text-[16px] font-semibold text-encre bg-blanc px-[24px] py-[12px] rounded-full hover:bg-creme transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blanc">Réserver une place</a>
             </div>
 
         </div>
     </section>
 </main>
 
-<!-- FOOTER (Շտկված են հավասարազոր h3 վերնագրերը) -->
+<!-- PIED DE PAGE (FOOTER) -->
 <footer class="bg-encre pt-[64px] md:pt-[96px] text-blanc">
     <div class="max-w-[1152px] mx-auto px-4 md:px-8 pb-[48px] md:pb-[64px]">
         
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
             
-            <!-- 1-ին սյունակ -->
             <div>
                 <h3 class="font-titre font-bold text-[24px] mb-[12px]">Fleurs Roussel</h3>
                 <p class="font-inter text-[14px] text-blanc/80 leading-relaxed">
@@ -207,7 +202,6 @@
                 </p>
             </div>
 
-            <!-- 2-րդ սյունակ (h4-ը փոխարինվել է h3-ով) -->
             <div>
                 <h3 class="font-inter font-bold text-[14px] md:text-[16px] mb-[12px] md:mb-[16px]">Boutique</h3>
                 <div class="font-inter text-[14px] text-blanc/80 flex flex-col gap-1">
@@ -217,12 +211,11 @@
                 </div>
             </div>
 
-            <!-- 3-րդ սյունակ (h4-ը փոխարինվել է h3-ով) -->
             <div>
                 <h3 class="font-inter font-bold text-[14px] md:text-[16px] mb-[12px] md:mb-[16px]">Liens utiles</h3>
                 <nav class="font-inter text-[14px] text-blanc/80 flex flex-col gap-2" aria-label="Liens utiles du pied de page">
-                    <a href="livraison.html" class="hover:text-blanc transition-colors underline-offset-4 hover:underline">Livraison</a>
-                    <a href="#" class="hover:text-blanc transition-colors underline-offset-4 hover:underline">Mentions légales</a>
+                    <a href="livraison.html" class="hover:text-blanc transition-colors underline-offset-4 hover:underline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blanc">Livraison</a>
+                    <a href="#" class="hover:text-blanc transition-colors underline-offset-4 hover:underline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blanc">Mentions légales</a>
                 </nav>
             </div>
 
