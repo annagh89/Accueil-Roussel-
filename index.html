@@ -14,20 +14,38 @@
 <body>
 
 <!-- EN-TÊTE (HEADER) -->
+
 <header class="bg-creme py-4">
-    <div class="max-w-[1152px] mx-auto px-4 md:px-8 grid grid-cols-[1fr_auto] md:grid-cols-[auto_1fr_auto] items-center gap-y-4 md:gap-x-8">
-        
+    <!-- Version Mobile (< 768px) : Focus = Logo -> Commander -> Navigation -->
+    <div class="max-w-[1152px] mx-auto px-4 md:hidden grid grid-cols-[1fr_auto] items-center gap-y-4">
         <a href="index.html" class="flex items-center gap-2  ">
             <img src="images/logo-roussel.svg" alt="" class="shrink-0 ">
             <span class="text-[24px] font-titre text-bordeaux font-bold whitespace-nowrap ">Fleurs Roussel</span>
         </a>
 
-        <a href="#commander" class="justify-self-end bg-framboise text-blanc px-[20px] py-[8px] rounded-full font-inter font-semibold text-[14px]  shrink-0 hover:bg-bordeaux transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-framboise md:order-3">
+        <a href="#commander" class="justify-self-end bg-framboise text-blanc px-[20px] py-[8px] rounded-full font-inter font-semibold text-[14px]  shrink-0 hover:bg-bordeaux transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-framboise">
             Commander
         </a>
 
-        <nav class="col-span-2 md:col-span-1 md:order-2 w-full" aria-label="Navigation principale">
-            <ul class="font-inter font-medium text-[14px] text-encre flex justify-between md:justify-center gap-x-[42.67px] md:gap-x-[24px]">
+        <nav class="col-span-2 w-full" aria-label="Navigation principale">
+            <ul class="font-inter font-medium text-[14px] text-encre flex justify-between gap-x-[42.67px]">
+                <li><a href="index.html" class="hover:text-bordeaux transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-framboise">Bouquets</a></li>
+                <li><a href="Ateliers.html" class="hover:text-bordeaux transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-framboise">Ateliers</a></li>
+                <li><a href="livraison.html" class="hover:text-bordeaux transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-framboise">Livraison</a></li>
+                <li><a href="contact.html" class="hover:text-bordeaux transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-framboise">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- Version Desktop (>= 768px) : Focus = Logo -> Navigation -> Commander -->
+    <div class="max-w-[1152px] mx-auto px-8 hidden md:grid md:grid-cols-[auto_1fr_auto] items-center md:gap-x-8">
+        <a href="index.html" class="flex items-center gap-2  ">
+            <img src="images/logo-roussel.svg" alt="" class="shrink-0 ">
+            <span class="text-[24px] font-titre text-bordeaux font-bold whitespace-nowrap ">Fleurs Roussel</span>
+        </a>
+
+        <nav class="w-full" aria-label="Navigation principale">
+            <ul class="font-inter font-medium text-[14px] text-encre flex md:justify-center md:gap-x-[24px]">
                 <li><a href="index.html" class="hover:text-bordeaux transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-framboise">Bouquets</a></li>
                 <li><a href="Ateliers.html" class="hover:text-bordeaux transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-framboise">Ateliers</a></li>
                 <li><a href="livraison.html" class="hover:text-bordeaux transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-framboise">Livraison</a></li>
@@ -35,6 +53,9 @@
             </ul>
         </nav>
 
+        <a href="#commander" class="justify-self-end bg-framboise text-blanc px-[20px] py-[8px] rounded-full font-inter font-semibold text-[14px]  shrink-0 hover:bg-bordeaux transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-framboise">
+            Commander
+        </a>
     </div>
 </header>
 
@@ -135,87 +156,103 @@
 
     <!-- SECTION ATOUTS -->
     <section class="bg-petale py-[64px] md:py-[96px] text-encre">
-        <div class="max-w-[1152px] mx-auto px-4 md:px-8 flex flex-col items-center gap-[32px] text-center">
-            <h2 class="font-titre font-bold text-[30px] md:text-[36px] leading-[1.2]">Pourquoi choisir Fleurs Roussel ?</h2>
+        <div class="max-w-[1152px] mx-auto px-4 md:px-8 flex flex-col items-center gap-[48px] text-center">
+            <h2 class="font-titre font-bold text-[30px] md:text-[36px] leading-[36px] md:leading-[40px]">
+                Pourquoi choisir Fleurs Roussel ?
+            </h2>
 
-            <div class="flex flex-col gap-[32px] md:grid md:grid-cols-3 w-full">
-                
-                <div class="flex flex-col items-center gap-[8px]">
-                    <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center">
-                        <img src="images/icone-saison.svg" alt="" class="w-8 h-8 object-contain">
+            <ul class="flex flex-col gap-[32px] md:grid md:grid-cols-3 md:gap-[40px] w-full">
+
+                <li class="flex flex-col items-center">
+                    <div class="mx-auto mb-[24px] flex size-16 items-center justify-center rounded-full bg-blanc">
+                        <img src="images/icone-saison.svg" alt="" class="size-8 object-contain">
                     </div>
-                    <h3 class="font-titre font-bold text-[20px]">Des fleurs de saison</h3>
-                    <p class="font-inter text-[16px] text-encre/80">Achetées chez des producteurs du Loir-et-Cher et de Touraine.</p>
-                </div>
+                    <h3 class="font-titre font-bold text-[20px] mb-[8px]">Des fleurs de saison</h3>
+                    <p class="font-inter text-[16px] text-encre">
+                        Achetées chez des producteurs du Loir-et-Cher et de Touraine.
+                    </p>
+                </li>
 
-                <div class="flex flex-col items-center gap-[8px]">
-                    <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center">
-                        <img src="images/icone-livraison.svg" alt="" class="w-8 h-8 object-contain">
+                <li class="flex flex-col items-center">
+                    <div class="mx-auto mb-[24px] flex size-16 items-center justify-center rounded-full bg-blanc">
+                        <img src="images/icone-livraison.svg" alt="" class="size-8 object-contain">
                     </div>
-                    <h3 class="font-titre font-bold text-[20px]">Livrées le jour même</h3>
-                    <p class="font-inter text-[16px] text-encre">Pour toute commande passée avant midi, dans Blois et ses environs.</p>
-                </div>
+                    <h3 class="font-titre font-bold text-[20px] mb-[8px]">Livrées le jour même</h3>
+                    <p class="font-inter text-[16px] text-encre">
+                        Pour toute commande passée avant midi, dans Blois et ses environs.
+                    </p>
+                </li>
 
-                <div class="flex flex-col items-center gap-[8px]">
-                    <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center">
-                        <img class="w-8 h-8 object-contain" src="images/icone-atelier.svg" alt="">
+                <li class="flex flex-col items-center">
+                    <div class="mx-auto mb-[24px] flex size-16 items-center justify-center rounded-full bg-blanc">
+                        <img src="images/icone-atelier.svg" alt="" class="size-8 object-contain">
                     </div>
-                    <h3 class="font-titre font-bold text-[20px]">Composées à la main</h3>
-                    <p class="font-inter text-[16px] text-encre">Chaque bouquet est unique et emballé dans du papier recyclé.</p>
-                </div>
+                    <h3 class="font-titre font-bold text-[20px] mb-[8px]">Composées à la main</h3>
+                    <p class="font-inter text-[16px] text-encre">
+                        Chaque bouquet est unique et emballé dans du papier recyclé.
+                    </p>
+                </li>
 
-            </div>
+            </ul>
         </div>
     </section>
-
     <!-- SECTION ATELIER -->
-    <section class="flex flex-col bg-sauge py-[64px] md:py-[96px]">
-        <div class="max-w-[1152px] mx-auto px-4 md:px-8 md:grid md:grid-cols-2 md:gap-[64px] md:items-center">
-            
+    <section id="atelier" class="bg-sauge py-[64px] md:py-[96px]">
+        <div class="max-w-[1152px] mx-auto px-4 md:px-8 md:grid md:grid-cols-2 md:gap-[40px] md:items-center">
+
             <div class="md:order-2">
                 <img class="rounded-[24px] w-full object-cover" src="images/atelier.svg" alt="Atelier floral de Madame Roussel">
             </div>
 
-            <div class="md:order-1">
-                <h2 class="text-[30px] font-bold font-titre text-blanc mb-[16px] mt-[40px] md:mt-0">Composez votre bouquet en atelier</h2>
-                <p class="font-inter text-[16px] text-blanc mb-[24px]">Un samedi par mois, Madame Roussel partage ses gestes de fleuriste. Vous repartez avec votre composition.</p>
-                <p class="font-inter text-[16px] text-blanc mb-[8px]">Six participants au maximum</p>
-                <p class="font-inter text-[16px] text-blanc mb-[8px]">Fleurs et matériel fournis</p>
-                <p class="font-inter text-[16px] text-blanc mb-[32px]">45 € par personne</p>
-                <a href="contact.html" class="inline-block font-inter text-[16px] font-semibold text-encre bg-blanc px-[24px] py-[12px] rounded-full hover:bg-creme transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blanc">Réserver une place</a>
+            <div class="md:order-1 mt-[32px] md:mt-0">
+                <h2 class="font-titre font-bold text-[30px] md:text-[36px] leading-[36px] md:leading-[40px] text-blanc mb-[16px]">
+                    Composez votre bouquet en atelier
+                </h2>
+                <p class="font-inter text-[16px] text-blanc mb-[24px]">
+                    Un samedi par mois, Madame Roussel partage ses gestes de fleuriste. Vous repartez avec votre composition.
+                </p>
+                <ul class="font-inter text-[16px] text-blanc space-y-[8px] mb-[32px]">
+                    <li>Six participants au maximum</li>
+                    <li>Fleurs et matériel fournis</li>
+                    <li>45 € par personne</li>
+                </ul>
+                <a href="contact.html" class="block w-full sm:w-auto sm:inline-block text-center font-inter text-[16px] font-semibold text-encre bg-blanc px-[24px] py-[12px] rounded-full hover:bg-creme active:bg-creme transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blanc">
+                    Réserver une place
+                </a>
             </div>
 
         </div>
     </section>
 </main>
-
 <!-- PIED DE PAGE (FOOTER) -->
-<footer class="bg-encre pt-[64px] md:pt-[96px] text-blanc">
-    <div class="max-w-[1152px] mx-auto px-4 md:px-8 pb-[48px] md:pb-[64px]">
-        
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
-            
-            <div>
-                <h3 class="font-titre font-bold text-[24px] mb-[12px]">Fleurs Roussel</h3>
-                <p class="font-inter text-[14px] text-blanc/80 leading-relaxed">
+<footer id="contact" class="bg-encre text-creme">
+    <div class="max-w-[1152px] mx-auto px-4 md:px-8 py-[48px]">
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-[32px] md:gap-[40px]">
+
+            <div class="flex flex-col gap-[8px]">
+                <p class="font-titre font-bold text-[24px] leading-[32px]">Fleurs Roussel</p>
+                <p class="font-inter text-[14px] leading-[20px]">
                     Artisan fleuriste à Blois depuis 1998.
                 </p>
             </div>
 
-            <div>
-                <h3 class="font-inter font-bold text-[14px] md:text-[16px] mb-[12px] md:mb-[16px]">Boutique</h3>
-                <div class="font-inter text-[14px] text-blanc/80 flex flex-col gap-1">
+            <address class="not-italic flex flex-col gap-[8px]">
+                <h2 class="font-inter font-bold text-[14px] leading-[20px]">Boutique</h2>
+                <div class="font-inter text-[14px] leading-[20px] flex flex-col">
                     <p>12 rue du Commerce, 41000 Blois</p>
                     <p>Du mardi au samedi, 9 h 30 à 19 h</p>
-                    <p>02 54 00 00 00</p>
+                    <a href="tel:0254000000" class="hover:underline underline-offset-4 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-creme">
+                        02 54 00 00 00
+                    </a>
                 </div>
-            </div>
+            </address>
 
-            <div>
-                <h3 class="font-inter font-bold text-[14px] md:text-[16px] mb-[12px] md:mb-[16px]">Liens utiles</h3>
-                <nav class="font-inter text-[14px] text-blanc/80 flex flex-col gap-2" aria-label="Liens utiles du pied de page">
-                    <a href="livraison.html" class="hover:text-blanc transition-colors underline-offset-4 hover:underline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blanc">Livraison</a>
-                    <a href="#" class="hover:text-blanc transition-colors underline-offset-4 hover:underline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blanc">Mentions légales</a>
+            <div class="flex flex-col gap-[8px]">
+                <h2 class="font-inter font-bold text-[14px] leading-[20px]">Liens utiles</h2>
+                <nav class="font-inter text-[14px] leading-[20px] flex flex-col" aria-label="Liens utiles du pied de page">
+                    <a href="livraison.html" class="underline-offset-4 hover:underline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-creme">Livraison</a>
+                    <a href="#" class="underline-offset-4 hover:underline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-creme">Mentions légales</a>
                 </nav>
             </div>
 
@@ -223,8 +260,8 @@
 
     </div>
 
-    <div class="border-t border-blanc/20 py-[24px] text-center w-full">
-        <p class="font-inter text-[14px] text-blanc/80">© Fleurs Roussel</p>
+    <div class="border-t border-creme/20 py-[16px] text-center w-full">
+        <p class="font-inter text-[12px] leading-[16px]">© Fleurs Roussel</p>
     </div>
 </footer>
 
