@@ -224,6 +224,14 @@
   .aspect-\[4\/3\] {
     aspect-ratio: 4/3;
   }
+  .size-8 {
+    width: calc(var(--spacing) * 8);
+    height: calc(var(--spacing) * 8);
+  }
+  .size-16 {
+    width: calc(var(--spacing) * 16);
+    height: calc(var(--spacing) * 16);
+  }
   .w-full {
     width: 100%;
   }
@@ -254,6 +262,9 @@
   .justify-between {
     justify-content: space-between;
   }
+  .justify-center {
+    justify-content: center;
+  }
   .gap-2 {
     gap: calc(var(--spacing) * 2);
   }
@@ -268,6 +279,9 @@
   }
   .gap-\[40px\] {
     gap: 40px;
+  }
+  .gap-\[48px\] {
+    gap: 48px;
   }
   :where(.space-y-\[8px\] > :not(:last-child)) {
     --tw-space-y-reverse: 0;
@@ -303,11 +317,8 @@
     border-top-style: var(--tw-border-style);
     border-top-width: 1px;
   }
-  .border-creme\/20 {
-    border-color: color-mix(in srgb, #FBF6F0 20%, transparent);
-    @supports (color: color-mix(in lab, red, red)) {
-      border-color: color-mix(in oklab, var(--color-creme) 20%, transparent);
-    }
+  .border-creme {
+    border-color: var(--color-creme);
   }
   .border-framboise {
     border-color: var(--color-framboise);
@@ -324,8 +335,14 @@
   .bg-framboise {
     background-color: var(--color-framboise);
   }
+  .bg-petale {
+    background-color: var(--color-petale);
+  }
   .bg-sauge {
     background-color: var(--color-sauge);
+  }
+  .object-contain {
+    object-fit: contain;
   }
   .object-cover {
     object-fit: cover;
@@ -456,12 +473,6 @@
   }
   .text-encre {
     color: var(--color-encre);
-  }
-  .text-encre\/80 {
-    color: color-mix(in srgb, #2B2024 80%, transparent);
-    @supports (color: color-mix(in lab, red, red)) {
-      color: color-mix(in oklab, var(--color-encre) 80%, transparent);
-    }
   }
   .text-framboise {
     color: var(--color-framboise);
