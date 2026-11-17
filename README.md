@@ -1,28 +1,59 @@
-1. Problème constaté (Ma demande)
-   Lorsque je navigue dans l'en-tête (header) du site avec la touche Tab du clavier, l'ordre du focus n'est pas logique. Après le logo « Fleurs Roussel », le focus passe directement sur le bouton « Commander » à droite, avant de revenir sur les liens du menu de navigation (« Bouquets », « Ateliers », « Livraison », « Contact »).
+Markdown
+# Fleurs Roussel — Artisan Fleuriste à Blois
 
-2. Explication du problème (Analyse)
-   Ce problème vient de l'ordre des éléments dans le code HTML. Dans le code, le bouton « Commander » était écrit avant la balise <nav>, et il était déplacé à droite uniquement grâce à la classe CSS md:order-3. Cependant, le navigateur suit toujours l'ordre du code HTML pour la navigation au clavier, et non l'ordre visuel créé par le CSS.
-
-3. Solution proposée et appliquée
-   Pour corriger l'ordre du focus sans changer l'apparence visuelle sur mobile et sur ordinateur :
-
-J'ai déplacé la balise <nav> avant le bouton « Commander » dans le code HTML.
-
-J'ai utilisé les classes Tailwind order-3 md:order-2 sur <nav> et order-2 md:order-3 sur le bouton « Commander » pour garder la bonne mise en page sur tous les écrans.
-
-Désormais, la navigation au clavier suit l'ordre logique : Logo → Bouquets → Ateliers → Livraison → Contact → Commander.
+Intégration de la page d'accueil du site **Fleurs Roussel** réalisée avec **HTML5** sémantique et **Tailwind CSS v4** (approche *mobile-first*).
 
 
 
-Problème constaté (Mobile)
-Sur la version mobile (390 px), l'ordre visuel des éléments dans l'en-tête est différent de la version ordinateur : le bouton « Commander » est en haut à droite (sur la même ligne que le logo) et le menu de navigation est en dessous. Avec un seul bloc HTML, le focus du clavier (Tab) descendait d'abord sur le menu avant de remonter sur le bouton « Commander », ce qui n'était pas naturel pour l'utilisateur.
+## Installation et initialisation du projet
 
-Solution appliquée
-Comme le navigateur suit toujours l'ordre du code HTML pour la tabulation (Tab), j'ai séparé la structure de l'en-tête en deux versions adaptées à chaque taille d'écran :
+Pour installer les dépendances d'un projet déjà existant :
 
-Pour mobile (md:hidden) : L'ordre HTML suit la mise en page mobile : Logo → Commander → Menu de navigation.
+```bash
+npm install
+Étapes d'initialisation réalisées depuis zéro
+Initialisation d'un nouveau projet Node.js :
 
-Pour ordinateur (hidden md:grid) : L'ordre HTML suit la mise en page desktop : Logo → Menu de navigation → Commander.
+Bash
+npm init -y
+Installation de Tailwind CSS et de son outil en ligne de commande (CLI) :
 
-De cette façon, l'ordre du focus au clavier correspond exactement à l'ordre visuel sur tous les écrans, sans aucun saut.
+Bash
+npm install tailwindcss @tailwindcss/cli
+Lancement manuel du compilateur Tailwind en mode surveillance (--watch) :
+
+Bash
+npx @tailwindcss/cli -i ./src/input.css -o ./dist/output.css --watch
+Configuration de package.json et compilation
+Les scripts suivants ont été ajoutés dans la section "scripts" du fichier package.json :
+
+JSON
+"scripts": {
+  "dev": "tailwindcss -i ./src/input.css -o ./dist/output.css --watch",
+  "build": "tailwindcss -i ./src/input.css -o ./dist/output.css --minify"
+}
+Mode développement (surveille les modifications et met à jour ./dist/output.css automatiquement) :
+
+Bash
+npm run dev
+Mode production (génère et minifie le fichier final ./dist/output.css) :
+
+Bash
+npm run build
+Structure du projet
+Plaintext
+accueil-roussel/
+├── dist/
+│   └── output.css       # Fichier CSS généré par Tailwind CSS
+├── images/              # Logo, illustrations et icônes SVG
+├── src/
+│   └── input.css        # Fichier source Tailwind (@import "tailwindcss" et @theme)
+├── index.html           # Structure HTML sémantique de la page d'accueil
+├── package.json         # Configuration npm et scripts de compilation
+└── README.md            # Documentation du projet
+Choix techniques et intégration
+Thème personnalisé (@theme) : déclaration centralisée des couleurs (framboise, bordeaux, sauge, creme, petale, encre, blanc) et des polices (Playfair Display et Inter) dans src/input.css.
+
+Responsive Design : intégration mobile-first (390 px) adaptée jusqu'aux grands écrans (1440 px) sans défilement horizontal (points de rupture sm:, md:, lg:).
+
+Accessibilité : balises HTML5 sémantiques, textes alternatifs adaptés sur les images, contrastes conformes et états :hover et :focus-visible sur les liens et boutons.
