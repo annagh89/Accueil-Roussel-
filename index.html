@@ -102,13 +102,13 @@
             <h2 class="font-titre font-bold text-[30px] md:text-[36px] leading-[36px] md:leading-[40px] mb-[16px] text-encre">
                 Les bouquets de la semaine
             </h2>
-            <p class="font-inter text-[16px] mb-[40px] text-encre/80">
+            <p class="font-inter text-[16px] mb-[40px] text-encre">
                 Trois compositions renouvelées chaque lundi, en taille moyenne. Livraison possible le jour même à Blois.
             </p>
 
-            <div class="flex flex-wrap gap-x-[40px] gap-y-[32px]">
+            <div class="grid grid-cols-1 gap-[32px] sm:grid-cols-2 lg:grid-cols-3">
 
-                <article class="w-full sm:w-[calc((100%_-_40px)/2)] lg:w-[calc((100%_-_80px)/3)] flex flex-col overflow-hidden rounded-[16px] bg-creme shadow-[0_1px_3px_rgba(0,0,0,0.06)] transition-shadow duration-200 hover:shadow-[0_8px_24px_rgba(0,0,0,0.12)]">
+                <article class="flex flex-col overflow-hidden rounded-[16px] bg-creme shadow-[0_1px_3px_rgba(0,0,0,0.06)] transition-shadow duration-200 hover:shadow-[0_8px_24px_rgba(0,0,0,0.12)]">
                     <img src="images/bouquet-marche.svg" alt="Bouquet du marché avec renoncules et marguerites" class="aspect-[4/3] w-full object-cover">
                     <div class="flex flex-1 flex-col p-[24px]">
                         <h3 class="font-titre font-bold text-[20px] mb-[8px] text-bordeaux">Bouquet du marché</h3>
@@ -122,7 +122,7 @@
                     </div>
                 </article>
 
-                <article class="w-full sm:w-[calc((100%_-_40px)/2)] lg:w-[calc((100%_-_80px)/3)] flex flex-col overflow-hidden rounded-[16px] bg-creme shadow-[0_1px_3px_rgba(0,0,0,0.06)] transition-shadow duration-200 hover:shadow-[0_8px_24px_rgba(0,0,0,0.12)]">
+                <article class="flex flex-col overflow-hidden rounded-[16px] bg-creme shadow-[0_1px_3px_rgba(0,0,0,0.06)] transition-shadow duration-200 hover:shadow-[0_8px_24px_rgba(0,0,0,0.12)]">
                     <img src="images/bouquet-roses.svg" alt="Bouquet de roses anciennes parfumées" class="aspect-[4/3] w-full object-cover">
                     <div class="flex flex-1 flex-col p-[24px]">
                         <h3 class="font-titre font-bold text-[20px] mb-[8px] text-bordeaux">Roses anciennes</h3>
@@ -136,7 +136,7 @@
                     </div>
                 </article>
 
-                <article class="w-full sm:w-[calc((100%_-_40px)/2)] lg:w-[calc((100%_-_80px)/3)] flex flex-col overflow-hidden rounded-[16px] bg-creme shadow-[0_1px_3px_rgba(0,0,0,0.06)] transition-shadow duration-200 hover:shadow-[0_8px_24px_rgba(0,0,0,0.12)]">
+                <article class="flex flex-col overflow-hidden rounded-[16px] bg-creme shadow-[0_1px_3px_rgba(0,0,0,0.06)] transition-shadow duration-200 hover:shadow-[0_8px_24px_rgba(0,0,0,0.12)]">
                     <img src="images/bouquet-champetre.svg" alt="Bouquet champêtre avec fleurs des champs" class="aspect-[4/3] w-full object-cover">
                     <div class="flex flex-1 flex-col p-[24px]">
                         <h3 class="font-titre font-bold text-[20px] mb-[8px] text-bordeaux">Champêtre</h3>
@@ -154,48 +154,6 @@
         </div>
     </section>
 
-    <!-- SECTION ATOUTS -->
-    <section class="bg-petale py-[64px] md:py-[96px] text-encre">
-        <div class="max-w-[1152px] mx-auto px-4 md:px-8 flex flex-col items-center gap-[48px] text-center">
-            <h2 class="font-titre font-bold text-[30px] md:text-[36px] leading-[36px] md:leading-[40px]">
-                Pourquoi choisir Fleurs Roussel ?
-            </h2>
-
-            <ul class="flex flex-col gap-[42px] md:grid md:grid-cols-3  w-full">
-
-                <li class="flex flex-col items-center">
-                    <div class="mx-auto mb-[24px] flex size-16 items-center justify-center rounded-full bg-blanc">
-                        <img src="images/icone-saison.svg" alt="" class="size-8 object-contain">
-                    </div>
-                    <h3 class="font-titre font-bold text-[20px] mb-[8px]">Des fleurs de saison</h3>
-                    <p class="font-inter text-[16px] text-encre">
-                        Achetées chez des producteurs du Loir-et-Cher et de Touraine.
-                    </p>
-                </li>
-
-                <li class="flex flex-col items-center">
-                    <div class="mx-auto mb-[24px] flex size-16 items-center justify-center rounded-full bg-blanc">
-                        <img src="images/icone-livraison.svg" alt="" class="size-8 object-contain">
-                    </div>
-                    <h3 class="font-titre font-bold text-[20px] mb-[8px]">Livrées le jour même</h3>
-                    <p class="font-inter text-[16px] text-encre">
-                        Pour toute commande passée avant midi, dans Blois et ses environs.
-                    </p>
-                </li>
-
-                <li class="flex flex-col items-center">
-                    <div class="mx-auto mb-[24px] flex size-16 items-center justify-center rounded-full bg-blanc">
-                        <img src="images/icone-atelier.svg" alt="" class="size-8 object-contain">
-                    </div>
-                    <h3 class="font-titre font-bold text-[20px] mb-[8px]">Composées à la main</h3>
-                    <p class="font-inter text-[16px] text-encre">
-                        Chaque bouquet est unique et emballé dans du papier recyclé.
-                    </p>
-                </li>
-
-            </ul>
-        </div>
-    </section>
     <!-- SECTION ATELIER -->
     <section id="atelier" class="bg-sauge py-[64px] md:py-[96px]">
         <div class="max-w-[1152px] mx-auto px-4 flex flex-col gap-[40px] md:px-8 md:grid md:grid-cols-2 md:items-center">
@@ -223,6 +181,7 @@
 
         </div>
     </section>
+
 </main>
 <!-- PIED DE PAGE (FOOTER) -->
 <footer id="contact" class="bg-encre text-creme">
